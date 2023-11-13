@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTS - Registrasi Kendaraan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Registrasi Kendaraan Anda</h1>
+    </header>
+    <main>
+        <form id="register-form" action="#">
+            <div class="container">
+                <div class="form-group">
+                    <div>Status:</div>
+                    <div class="radio-group">
+                        <div>
+                            <input id="status-mhs" type="radio" name="status" value="mahasiswa">
+                            <label for="status-mhs">Mahasiswa</label>
+                        </div>
+                        <div>
+                            <input id="status-dosen" type="radio" name="status" value="dosen">
+                            <label for="status-dosen">Dosen</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div>NIM / NIDN:</div>
+                    <div>
+                        <input type="text" placeholder="000112233" name="idNumber">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div>Nama Lengkap:</div>
+                    <div>
+                        <input type="text" placeholder="Fikri Nurul" name="fullName" class="long-text">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div>Prodi:</div>
+                    <div>
+                        <select name="Prodi" id="prodi">
+                            <option value="" disabled selected>Pilih Prodi:</option>
+                            <option value="ti">Teknik Informatika</option>
+                            <option value="si">Sistem Informasi</option>
+                            <option value="bd">Bisnis Digital</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div>Jenis Kendaraan:</div>
+                    <div class="radio-group">
+                        <div>
+                            <input id="motor" type="radio" name="jenis-kendaraan" value="motor">
+                            <label for="motor">Motor</label>
+                        </div>
+                        <div>
+                            <input id="mobil" type="radio" name="jenis-kendaraan" value="mobil">
+                            <label for="mobil">Mobil</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div>NoPol:</div>
+                    <div>
+                        <input type="text" placeholder="B 1234 ABC" name="noPol">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div>Merk:</div>
+                    <div>
+                        <input type="text" placeholder="Merk" name="merk">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div>Upload STNK:</div>
+                    <div>
+                        <input type="file" placeholder="Upload STNK" name="stnk">
+                    </div>
+                </div>
+                <div class="form-action">
+                    <button type="submit">Daftar</button>
+                </div>
+            </div>
+        </form>
+    </main>
+    <script>
+        document.getElementById('register-form').onsubmit = (e) => e.preventDefault()
+    </script>
+</body>
+</html>
